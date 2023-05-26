@@ -23,23 +23,23 @@
             <input type="submit" value="search" class="btn btn-primary" />
         </div>
     </div>
-    <h1 id="city">  New York </h1>
+    <h1 id="city"> </h1>
     <ul>
         <li> last updated : Sunday 13:18  </li>
-        <li> clear sky </li>
+        <li id="description"> </li>
     </ul>
     <div class="row">
         <div class="col-6">
             <div class="clearfix weather-temp">
                 <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="clear" class="float-left" />
-                 <strong>15</strong> 
+                 <strong id="temperature"></strong> 
                  <span class="units">°C |<a href="#" id="fahr">°F </a> </span> 
             </div>
         </div>
         <div class="col-6"> 
             <ul>
-                <li> humidity : 50% </li>
-                <li>wind :5 km/h </li>
+                <li> humidity :<span id="humidity">%</span></li>
+                <li> wind : <span id="wind"></span> km/h </li>
             </ul>
         </div>
     </div>
