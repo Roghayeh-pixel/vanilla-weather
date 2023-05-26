@@ -23,15 +23,18 @@
             <input type="submit" value="search" class="btn btn-primary" />
         </div>
     </div>
-    <h1 id="city"> </h1>
+    <h1 id="city">  New York </h1>
     <ul>
         <li> last updated : Sunday 13:18  </li>
         <li> clear sky </li>
     </ul>
     <div class="row">
         <div class="col-6">
-            <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="clear" />
-            15°C | °F
+            <div class="clearfix weather-temp">
+                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="clear" class="float-left" />
+                 <strong>15</strong> 
+                 <span class="units">°C |<a href="#" id="fahr">°F </a> </span> 
+            </div>
         </div>
         <div class="col-6"> 
             <ul>
@@ -42,8 +45,9 @@
     </div>
 </div>
 <small> 
-    <a href="https://github.com/Roghayeh-pixel/vanilla-weather" target="_blank"> open-source code, </a>by Roghayeh Yalmeh
+    <a href="https://github.com/Roghayeh-pixel/vanilla-weather" target="_blank"> open-source code, </a> by Roghayeh Yalmeh
 </small>
+     
   <script src="index.js"></script>  
 </div>
 </body>
