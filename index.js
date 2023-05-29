@@ -29,6 +29,9 @@ function displayTempreature(response){
     let windElement = document.querySelector("#wind");
     let dateElement = document.querySelector("#date");
     let iconElement = document.querySelector("#icon");
+    
+    celsiusTemperature= response.data.main.temp
+
     temperatureElement.innerHTML =Math.round(response.data.main.temp);
     cityElement.innerHTML = response.data.name;
     descriptionElement.innerHTML = response.data.weather[0].description;
@@ -48,8 +51,23 @@ function handleSubmit(event) {
     let cityInputElement = document.querySelector("#city-input");
     search(cityInputElement.value);
 }
+function displayFahrenheit (event){
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    celsius.classList.remove("active");
+    fahrenheit.classList.add("active");
+    let fahrenheitTemperatyre = (celsiusTemperature *9)/ 5 + 32;
+    temperatureElement.innerHTML= Math.round(fahrenheitTemperatyre);
+}
+function displayCelsius(event){
+   event.preventDefault(); 
+   celsius.classList.add("active");
+   fahrenheit.classList.remove("active"); 
+   let temperatureElement = document.querySelector("#temperature");
+   temperatureElement.innerHTML = Math.round(celsiusTemperature ); 
+}
 
-search("Sydney");
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
@@ -57,3 +75,11 @@ form.addEventListener("submit", handleSubmit);
 //let apikey = "d154fc7005a41959d58d6c5664de965a"
 //let apiURl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
 //axios.get(apiURl).then(displayTempreature);
+
+let fahrenheit = document.querySelector("#fahr"); 
+fahrenheit.addEventListener ("click", displayFahrenheit );
+
+let celsius = document.querySelector("#celsi"); 
+celsius.addEventListener ("click", displayCelsius );
+
+search("Sydney");
