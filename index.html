@@ -15,8 +15,8 @@
 <div class="weather-app">
     <div class="row">
         <div class="col-9">
-            <form class="search" id="search-form">
-                <input type="text" placeholder="type a city" autofocus="on" id="city-input" class="form-control shadow-sm" />
+            <form id="search-form" class="mb-3">
+                <input type="search" placeholder="type a city" autofocus="on" autocomplete="off" id="city-input" class="form-control shadow-sm" />
             </form>
         </div>
         <div class="col-3">
@@ -31,7 +31,7 @@
     <div class="row">
         <div class="col-6">
             <div class="clearfix weather-temp">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="clear" class="float-left" />
+                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="weather" id="icon" class="float-left" />
                  <strong id="temperature"></strong> 
                  <span class="units">°C |<a href="#" id="fahr">°F </a> </span> 
             </div>
