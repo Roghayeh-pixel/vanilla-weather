@@ -28,15 +28,15 @@ function displayTempreature(response){
     let humidityElement= document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
     let dateElement = document.querySelector("#date");
-    temperatureElement.innerHTML =Math.round(response.data.main.temp);
+    //temperatureElement.innerHTML =Math.round(response.data.main.temp);
     cityElement.innerHTML = response.data.name;
     descriptionElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humiidity;
     windElement.innerHTML = Math.round(response.data.wind.speed);
     dateElement.innerHTML = formatDate (response.data.dt * 1000);
 }
-
-let apikey = "d154fc7005a41959d58d6c5664de965a";
+ 
 let city = "New York";
+let apikey = "d154fc7005a41959d58d6c5664de965a"
 let apiURl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
 axios.get(apiURl).then(displayTempreature);
