@@ -71,10 +71,10 @@ let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-//let city = "New York";
-//let apikey = "d154fc7005a41959d58d6c5664de965a"
-//let apiURl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
-//axios.get(apiURl).then(displayTempreature);
+let city = "New York";
+let apikey = "037o47a8760f1tc33c2fd2df9113d0b8"
+let apiURl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+axios.get(apiURl).then(displayTempreature);
 
 let fahrenheit = document.querySelector("#fahr"); 
 fahrenheit.addEventListener ("click", displayFahrenheit );
